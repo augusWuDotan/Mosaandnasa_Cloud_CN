@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">爱美语云端</string>
+    <string name="inLogin">进入系统</string>
+    <string name="title">爱美语云端系统</string>
+    <string name="Account">请输入帐号</string>
+    <string name="Password">请输入密码</string>
+    <string name="Login">登入</string>
+
+
+      
+    <string name="app_name1">愛美語雲端</string>    
+    <string name="inLogin1">進入系統</string>
+    <string name="title1">愛美語雲端系統</string>
+    <string name="Account1">請輸入帳號</string>
+    <string name="Password1">請輸入密碼</string>
+    <string name="Login1">登入</string>
+
+</resources>
