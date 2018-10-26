@@ -99,6 +99,15 @@
             android:orientation="horizontal"
             app:layout_constraintGuide_percent="0.38" />
 
+        <Switch
+            android:id="@+id/save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/save"
+            app:layout_constraintEnd_toEndOf="@+id/ivLogin"
+            app:layout_constraintTop_toBottomOf="@+id/ivLogin" />
+
     </android.support.constraint.ConstraintLayout>
 
 </android.support.constraint.ConstraintLayout>

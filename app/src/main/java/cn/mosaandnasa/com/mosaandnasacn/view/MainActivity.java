@@ -1,12 +1,12 @@
 package cn.mosaandnasa.com.mosaandnasacn.view;
 
+import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
@@ -21,10 +21,7 @@ import android.widget.Toast;
 
 import com.airbnb.lottie.LottieAnimationView;
 
-import java.net.HttpURLConnection;
 import java.net.URLEncoder;
-
-import javax.net.ssl.HttpsURLConnection;
 
 import cn.mosaandnasa.com.mosaandnasacn.R;
 
@@ -34,25 +31,21 @@ public class MainActivity extends AppCompatActivity {
     LinearLayout ll;
     LottieAnimationView animationView;
 
-    private String URL_DOMAIN_cn = "http://m.mosaandnasa.com.cn/Admin/Index/?Token="; //大陸
-    private String URL_DOMAIN = "http://m.mosaandnasa.com/Admin/Index/?Token="; //台灣
-    private boolean isTaiwan = true;
+    private String URL_DOMAIN = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        try{
+        URL_DOMAIN = getString(R.string.domain) + "/Admin/Index/?Token=";
+        try {
             String url = URLEncoder.encode(getIntent().getStringExtra("URL"), "UTF-8");
-            URL = new StringBuffer().append(isTaiwan?URL_DOMAIN : URL_DOMAIN_cn).append(url).toString();
-        }catch (Exception e){
+            URL = new StringBuffer().append(URL_DOMAIN).append(url).toString();
+        } catch (Exception e) {
 
-        }
-
-
-
+        }/**/
         //
-        ll = (LinearLayout)this.findViewById(R.id.ll);
+        ll = (LinearLayout) this.findViewById(R.id.ll);
         ll.setVisibility(View.VISIBLE);
         animationView = (LottieAnimationView) findViewById(R.id.animView);
         animationView.setVisibility(View.VISIBLE);
@@ -104,26 +97,25 @@ public class MainActivity extends AppCompatActivity {
             if (webView.canGoBack()) {
                 webView.goBack();
             } else {
-//                AlertDialog.Builder dialog = new AlertDialog.Builder(MainActivity.this);
-//                dialog.setTitle("提醒");
-//                dialog.setMessage("是否登出？");
-//                dialog.setIcon(R.mipmap.ic_launcher);
-//                dialog.setPositiveButton("確定", new DialogInterface.OnClickListener() {
-//                    @Override
-//                    public void onClick(DialogInterface dialogInterface, int i) {
-//                        finish();
-//                        dialogInterface.dismiss();
-//
-//                    }
-//                });
-//                dialog.setNegativeButton("返回", new DialogInterface.OnClickListener() {
-//                    @Override
-//                    public void onClick(DialogInterface dialogInterface, int i) {
-//                        dialogInterface.dismiss();
-//                    }
-//                });
-//
-//                dialog.show();
+                android.app.AlertDialog.Builder dialog = new android.app.AlertDialog.Builder(MainActivity.this,android.R.style.Theme_DeviceDefault_Light_Dialog_MinWidth);
+                dialog.setTitle(R.string.remind);
+                dialog.setMessage(R.string.is_it_logged_out);
+                dialog.setIcon(R.mipmap.ic_launcher);
+                dialog.setPositiveButton(R.string.determine, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        finish();
+                        dialogInterface.dismiss();
+
+                    }
+                });
+                dialog.setNegativeButton(R.string.back, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.dismiss();
+                    }
+                });
+                dialog.show();
             }
             return true;
         }
@@ -197,7 +189,7 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case "rar":
                 case "zip":
-                    Toast.makeText(MainActivity.this, "行动装置上无法使用此类型档案", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, R.string.device_not_support_file, Toast.LENGTH_SHORT).show();
                     break;
                 default:
 
@@ -208,8 +200,6 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-//        super.onBackPressed();
+        //super.onBackPressed();
     }
-
-
 }
