@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">愛美語雲端</string>
+    <string name="domain">https://m.mosaandnasa.com</string>
+    <string name="inLogin">進入系統</string>
+    <string name="title">愛美語雲端系統</string>    
+    <string name="Account">請輸入帳號</string>
+    <string name="Password">請輸入密碼</string>
+    <string name="Login">登入</string>
+    <string name="save">紀錄帳密</string>
+    <string name="remind">提醒</string>
+    <string name="is_it_logged_out">是否登出？</string>
+    <string name="back">返回</string>
+    <string name="determine">確定</string>
+    <string name="device_not_support_file">行動裝置上無法使用此類型檔案</string>
+</resources>

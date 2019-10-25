@@ -35,7 +35,6 @@
             android:layout_marginStart="30dp"
             android:background="@drawable/common_edit_bg_corner3dp"
             android:ems="10"
-
             android:hint="@string/Account"
             android:inputType="textPersonName"
             android:paddingLeft="8dp"
@@ -98,6 +97,15 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             app:layout_constraintGuide_percent="0.38" />
+
+        <Switch
+            android:id="@+id/save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/save"
+            app:layout_constraintEnd_toEndOf="@+id/ivLogin"
+            app:layout_constraintTop_toBottomOf="@+id/ivLogin" />
 
     </android.support.constraint.ConstraintLayout>
 
