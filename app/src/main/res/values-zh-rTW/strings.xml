@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">愛美語雲端</string>
-    <string name="domain">http://m.mosaandnasa.com</string>
+    <string name="domain">https://m.mosaandnasa.com</string>
     <string name="inLogin">進入系統</string>
     <string name="title">愛美語雲端系統</string>    
     <string name="Account">請輸入帳號</string>

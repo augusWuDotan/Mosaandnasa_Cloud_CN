@@ -35,7 +35,6 @@
             android:layout_marginStart="30dp"
             android:background="@drawable/common_edit_bg_corner3dp"
             android:ems="10"
-
             android:hint="@string/Account"
             android:inputType="textPersonName"
             android:paddingLeft="8dp"

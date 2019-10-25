@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">爱美语云端</string>
-    <string name="domain">http://m.mosaandnasa.com.cn</string>
+    <string name="domain">https://m.mosaandnasa.com.cn</string>
     <string name="inLogin">进入系统</string>
     <string name="title">爱美语云端系统</string>
     <string name="Account">请输入帐号</string>
